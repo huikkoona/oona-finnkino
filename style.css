@@ -1,0 +1,101 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #1c1c1c;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Otsikko */
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffd800;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Label */
+
+  label {
+    color: #ffffff;
+  }
+  
+  /* Dropdown */
+
+  select {
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    border: 2px solid #ff69b4;
+    background-color: #ffffff;
+    color: #1c1c1c;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+  
+  /* Elokuvataulut */
+
+  #movieList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Kortti */
+
+  .movie {
+    background-color: #fff;
+    border: 2px solid #ffc0cb;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .movie:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Kuva */
+
+  .movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Elokuvan nimi */
+
+  .movie h3 {
+    color: #d63384; 
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Lisätiedot */
+
+  .movie p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+  }
+  /* Lomake-elementtien ryhmittely */
+.form-group {
+    margin: 1rem 0;
+  }
+  
+  /* Sama ulkoasu myös aika-valinnalle kuin dropdownissa */
+  .time-input {
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    border: 2px solid #ff69b4;
+    background-color: #ffffff;
+    color: #1c1c1c;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  

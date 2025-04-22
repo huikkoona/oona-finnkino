@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finnkino Aikataulu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Finnkino Elokuvat</h1>
+
+  <!-- Teatterin valinta -->
+  <div class="form-group">
+    <label for="theaterSelect">Valitse teatteri:</label><br />
+    <select id="theaterSelect"></select>
+  </div>
+
+  <!-- Ajan valinta -->
+  <div class="form-group">
+    <label for="timeInput">Valitse aika:</label><br />
+    <input 
+      type="time" 
+      id="timeInput"
+      class="time-input"
+    />
+  </div>
+
+  <!-- Elokuvakortit -->
+  <div id="movieList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
