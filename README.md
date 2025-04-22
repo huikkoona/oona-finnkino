@@ -29,8 +29,8 @@ Sovellus hakee elokuvatietoja Finnkinon XML-rajapinnasta ja näyttää ne kortte
 ## 🔗 Linkit
 
 - 🌐 **Julkaistu sovellus**: *(lisää Netlify-linkkisi tähän)*
-- 💻 **GitHub-repositorio**: *(lisää GitHub-linkkisi tähän)*
-- 🎥 **Esittelyvideo (YouTube)**: *(lisää video-URL tähän)*
+- 💻 **GitHub-repositorio**: *(https://github.com/huikkoona/oona-finnkino)*
+- 🎥 **Esittelyvideo**: *(lisää video-URL tähän)*
 
 ---
 
