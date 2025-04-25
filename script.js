@@ -1,10 +1,11 @@
-// Odotetaan että koko sivu on ladattu ennen kuin ajetaan koodi
+
 document.addEventListener('DOMContentLoaded', () => {
     const theaterSelect = document.getElementById('theaterSelect'); // Dropdown teatterin valintaan
     const movieList = document.getElementById('movieList');         // Elokuvakorttien säiliö
     const timeInput = document.getElementById('timeInput');         // Aikahakukenttä ("HH:MM")
   
-    // 🔹 1. Haetaan kaikki Finnkinon teatterit XML-rajapinnasta
+    // 1. Haetaan kaikki Finnkinon teatterit XML-rajapinnasta
+    
     fetch('https://www.finnkino.fi/xml/TheatreAreas/')
       .then(response => response.text()) // Vastaus XML-muodossa tekstinä
       .then(xmlString => {
@@ -23,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
   
-    // 🔹 2. Kun käyttäjä valitsee teatterin, haetaan sen elokuvat tälle päivälle
+    // 2. Kun käyttäjä valitsee teatterin, haetaan sen elokuvat tälle päivälle
+    
     theaterSelect.addEventListener('change', () => {
       const areaId = theaterSelect.value; // Valitun teatterin ID
       const today = new Date().toISOString().split('T')[0]; // Tämän päivän pvm "YYYY-MM-DD"
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const searchTime = timeInput.value; // Käyttäjän syöttämä aika esim. "18:00"
   
           // Käydään läpi jokainen näytös
+            
           shows.forEach(show => {
             const title = show.querySelector("Title").textContent; // Elokuvan nimi
             const img = show.querySelector("EventLargeImagePortrait").textContent; // Kuvan URL
@@ -47,13 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const showTimeStr = timeRaw.toTimeString().slice(0, 5); // Otetaan vain "HH:MM"
             const theatre = show.querySelector("Theatre").textContent; // Teatterin nimi
   
-            // 🔍 Jos aika ei ole annettu, näytetään kaikki — tai näytetään vain täsmäävät ajat
+            // Jos aika ei ole annettu, näytetään kaikki — tai näytetään vain täsmäävät ajat
+              
             if (!searchTime || searchTime === showTimeStr) {
               // Luodaan kortti tälle elokuvalle
               const movieDiv = document.createElement("div");
               movieDiv.classList.add("movie");
   
               // Kortin sisältö HTML:llä
+                
               movieDiv.innerHTML = `
                 <h3>${title}</h3>
                 <img src="${img}" alt="${title}" />
@@ -62,13 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
               `;
   
               // Lisätään kortti sivulle
+                
               movieList.appendChild(movieDiv);
             }
           });
         });
     });
   
-    // 🔹 3. Kun käyttäjä syöttää kellonajan, päivitetään elokuvat automaattisesti
+    //  3. Kun käyttäjä syöttää kellonajan, päivitetään elokuvat automaattisesti
+    
     timeInput.addEventListener('input', () => {
       theaterSelect.dispatchEvent(new Event('change')); // Triggeröidään teatterin valinnan tapahtuma uudelleen
     });
