@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const theaterSelect = document.getElementById('theaterSelect'); // Dropdown teatterin valintaan
     const movieList = document.getElementById('movieList');         // Elokuvakorttien säiliö
-    const timeInput = document.getElementById('timeInput');         // Aikahakukenttä ("HH:MM")
+    const timeInput = document.getElementById('timeInput');         // Aikahakukenttä 
   
-    // 1. Haetaan kaikki Finnkinon teatterit XML-rajapinnasta
+    // Haetaan kaikki Finnkinon teatterit XML-rajapinnasta
     
     fetch('https://www.finnkino.fi/xml/TheatreAreas/')
       .then(response => response.text()) // Vastaus XML-muodossa tekstinä
@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
   
-    // 2. Kun käyttäjä valitsee teatterin, haetaan sen elokuvat tälle päivälle
+    // käyttäjä valitsee teatterin, haetaan sen elokuvat tälle päivälle
     
     theaterSelect.addEventListener('change', () => {
       const areaId = theaterSelect.value; // Valitun teatterin ID
-      const today = new Date().toISOString().split('T')[0]; // Tämän päivän pvm "YYYY-MM-DD"
+      const today = new Date().toISOString().split('T')[0]; // Tämän päivän pvm 
       const url = `https://www.finnkino.fi/xml/Schedule/?area=${areaId}&dt=${today}`; // Rakennetaan API-kutsu
   
       fetch(url)
