@@ -28,15 +28,15 @@ Sovellus hakee elokuvatietoja Finnkinon XML-rajapinnasta ja näyttää ne kortte
 
 ## 🔗 Linkit
 
-- 🌐 **Julkaistu sovellus**: *(lisää Netlify-linkkisi tähän)*
+- 🌐 **Julkaistu sovellus**: *(https://app.netlify.com/sites/verdant-kleicha-5f6e4e/overview)*
 - 💻 **GitHub-repositorio**: *(https://github.com/huikkoona/oona-finnkino)*
-- 🎥 **Esittelyvideo**: *(lisää video-URL tähän)*
+- 🎥 **Esittelyvideo**: **
 
 ---
 
 ## 🕐 Käytetty aika
 
-- Tämän projektin tekemiseen kului yhteensä noin 11 tuntia ( 5 päivää)
+- Tämän projektin tekemiseen kului yhteensä noin 9 tuntia 
 
 ---
 
